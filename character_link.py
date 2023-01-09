@@ -8,8 +8,10 @@ from login_screen import at_login_screen
 from logout import logout_of_account
 from mission_config import read_json_file, JSON_FILE
 
+# TODO want to incorprate this into the start and ask for user input
 
-def login_to_character():
+
+def character_link():
     """Logs in a character from user.json file"""
     is_window_active()
     print("Working on: login()")
@@ -40,3 +42,6 @@ def login_to_character():
 
             logout_of_account()
             continue
+
+
+character_link()
