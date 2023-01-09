@@ -1,6 +1,5 @@
-from log import logger
 import time
-
+from log import logger
 from login_to_characters import login_to_character
 
 
