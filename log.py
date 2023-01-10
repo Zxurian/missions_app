@@ -2,22 +2,22 @@ import logging
 import os
 import mission_config
 
-logger = logging.getLogger("__name__")
-logger.setLevel(logging.INFO)
-
-# create a file handler
-handler = logging.FileHandler("logs/mission.log")
-handler.setLevel(logging.INFO)
-
-
 # Create a logger
 logging.basicConfig(
     level=logging.INFO,
     filename="logs/mission.log",
-    filemode="a",
-    format="%(asctime)s - %(name)s - %(levelname)s -  %(funcName)s - %(module)s - %(message)s ",
+    filemode="w",
+    format="%(asctime)s - %(levelname)s: %(module)s:: %(funcName)s - %(name)s - %(message)s  ",
 )
-# logger.info('testing logger')
+logger = logging.getLogger(__name__)
+
+handler = logging.FileHandler("logs/log.log")
+formatter = logging.Formatter("%(name)s -  %(funcName)s - %(module)s")
+handler.setFormatter(formatter)
+
+logger.addHandler(handler)
+
+
 try:
     # Set the maximum size of the log file in bytes
     MAX_SIZE = int(mission_config.get_option("log", "MAX_SIZE"))
