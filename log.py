@@ -14,7 +14,7 @@ handler.setLevel(logging.INFO)
 logging.basicConfig(
     level=logging.INFO,
     filename="logs/mission.log",
-    filemode="w",
+    filemode="a",
     format="%(asctime)s - %(name)s - %(levelname)s -  %(funcName)s - %(module)s - %(message)s ",
 )
 # logger.info('testing logger')
