@@ -1,7 +1,7 @@
 import cv2 as cv
 import img_page as ip
 
-image1 = "land.png"
+image1 = r"assets\hayland.png"
 haystack_img = cv.imread(image1, cv.IMREAD_UNCHANGED)
 
 needle_img = cv.imread(ip.landed, cv.IMREAD_UNCHANGED)

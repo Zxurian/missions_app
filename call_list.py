@@ -22,6 +22,7 @@ def call_list():
 
     Returns back to login_to_character
     """
+    wrong_market_count = 0
     welcome_back()
     menu()
     active_results = active_aileron_check()
@@ -39,7 +40,10 @@ def call_list():
                 start_game()
                 return
         else:
-            retrieve_package()
+            # TODO when wrong_market_count is ≥ count of user list then login to pilot and fly to other loc.
+            retrieve_results = retrieve_package()
+            if retrieve_results == False:
+                wrong_market_count += 1
             logout_of_account()
             # check if at end of character list
             character_results = end_of_characters()

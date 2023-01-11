@@ -11,9 +11,10 @@ import img_page as ip
 def landed_img():
     logger.info("Starting Flight")
     print("Starting Flight")
+    sleep(10)
     start_time = time.perf_counter()
     while True:
-        img_region = pygui.locateOnScreen(ip.landed, minSearchTime=2, confidence=0.5)
+        img_region = pygui.locateOnScreen(ip.landed, minSearchTime=2, confidence=0.7)
         pygui.moveTo(img_region)
         if img_region == None:
             continue

@@ -130,7 +130,7 @@ needle_Quanta_welcomeback = "assets\\welcomeBack_page\\needle_Quanta_welcomeback
 needle_welcomeBack = "assets\\welcomeBack_page\\needle_welcomeBack.png"
 
 # landed
-landed = "assets\\landed.png"
+landed = r"assets\hover_height.png"
 Okm = "assets\\0km.png"
 lessThan1km = "assets\\lessThan1km.png"
 haystack_welcomeback_full = "assets\welcomeBack_page\haystack_welcomeBack_full.png"
