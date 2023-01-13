@@ -19,10 +19,9 @@ def check_img_to_land():
     sleep(15)
 
     while True:
-        landed_img = pygui.locateOnScreen(ip.landed, minSearchTime=2, confidence=0.5)
-
-        pygui.moveTo(landed_img)
-        if landed_img == None:
+        img_region = pygui.locateOnScreen(ip.landed, minSearchTime=2, confidence=0.7)
+        pygui.moveTo(img_region)
+        if img_region == None:
             continue
 
         end_time = time.perf_counter()

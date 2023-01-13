@@ -16,4 +16,6 @@ def retrieve_package():
         logger.info(f"retrieve_package found {retrieve_package}")
         pygui.click(retrieve_package)
         double_check(ip.needle_mission_retrieveBtn, 0.8)
-        return
+        return True
+    else:
+        return False
