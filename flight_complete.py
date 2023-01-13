@@ -33,3 +33,4 @@ def check_img_to_land():
 
         # gives time for ship to land before continuing
         sleep(10)
+        return
