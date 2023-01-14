@@ -15,7 +15,6 @@ def is_window_active():
     if hwnd:
         pid = get_window_pid(hwnd)
         activate_window(hwnd)
-        screen_shot_error("activate_window")
         logger.info(f"{client} was activated")
     else:
         start_game()
