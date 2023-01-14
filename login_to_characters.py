@@ -14,8 +14,12 @@ from save_character_name import save_character_name
 from save_progress import save_progress
 
 
-def login_to_character():
-    """Logs in a character from user.json file"""
+def automate_character():
+    """Runs thorugh automation actions fo reach character.
+
+    This is the main function class that will run through all applicable actions for each character
+
+    """
     is_window_active()
 
     print("Working on: login()")
