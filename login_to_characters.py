@@ -5,7 +5,7 @@ from log import logger
 import random
 from time import sleep
 
-from is_window_active import is_window_active
+
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from login_screen import at_login_screen
@@ -56,6 +56,7 @@ def login_to_character():
             call_list()
             char_end_time = time.perf_counter()
             elapsed_time = char_end_time - char_start_time
-            logger.info(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
+            logger.info(
+                f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
             print(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
             continue

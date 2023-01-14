@@ -1,7 +1,7 @@
 import json
 from log import logger
 from time import sleep
-from is_window_active import is_window_active
+
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from login_screen import at_login_screen

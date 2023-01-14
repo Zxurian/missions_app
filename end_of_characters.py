@@ -5,7 +5,7 @@ from time import sleep
 import pydirectinput as pydir
 import img_page as ip
 
-from is_window_active import is_window_active
+
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from logout import logout_of_account
@@ -96,5 +96,6 @@ def end_of_characters():
 
         else:
             print("Have not reached the end of the character list yet.")
-            print(f"Last character: {last_key}, current character {file_contents}")
+            print(
+                f"Last character: {last_key}, current character {file_contents}")
             return False

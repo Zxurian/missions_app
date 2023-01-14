@@ -3,7 +3,7 @@ import pyautogui as pygui
 import pydirectinput as pydir
 from double_check import double_check
 import img_page as ip
-from is_window_active import is_window_active
+
 from verify_img import check_for_screen
 
 # aileron_parts = mission_config.get_option('mission1', 'aileron')

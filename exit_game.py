@@ -1,4 +1,4 @@
-from is_window_active import is_window_active
+
 from log import logger
 from time import sleep
 import pyautogui as pygui
@@ -18,6 +18,7 @@ def exit_game():
         ip.dismiss_screen, confidence=0.8, minSearchTime=2
     )
     if dismiss_screen:
-        dismiss_btn = check_for_screen("Dismiss Btn", ip.dismiss_btn, 0.8, True)
+        dismiss_btn = check_for_screen(
+            "Dismiss Btn", ip.dismiss_btn, 0.8, True)
         pygui.click(dismiss_btn, clicks=2)
     sleep(60)

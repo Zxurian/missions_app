@@ -2,7 +2,7 @@ from time import sleep
 import pydirectinput as pydir
 from flight_complete import check_img_to_land
 import img_page as ip
-from is_window_active import is_window_active
+
 from verify_img import check_for_screen
 
 

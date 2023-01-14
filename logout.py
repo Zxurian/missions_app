@@ -4,7 +4,7 @@ import pydirectinput as pydir
 import img_page as ip
 
 from time import sleep
-from is_window_active import is_window_active
+
 from verify_img import check_for_screen
 
 

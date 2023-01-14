@@ -3,7 +3,6 @@ from time import sleep
 import pyautogui as pygui
 from double_check import double_check
 import img_page as ip
-from is_window_active import is_window_active
 
 
 def mission_packages(mission_name, mission_pay):
