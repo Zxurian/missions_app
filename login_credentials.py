@@ -23,7 +23,7 @@ def login_with_credentials(username, password):
     needle_email = pygui.locateCenterOnScreen(
         ip.needle_email_login, confidence=0.8, minSearchTime=1
     )
-    pygui.click(needle_email)
+    pygui.click(needle_email, clicks=2)
     sleep(1)
     # pygui.write(username)
     ahk.send_input(username)
@@ -31,7 +31,7 @@ def login_with_credentials(username, password):
         ip.needle_pwd_login, confidence=0.8, minSearchTime=1
     )
     sleep(1)
-    pygui.click(needle_pwd)
+    pygui.click(needle_pwd, clicks=2)
     sleep(1)
     # pygui.write(password)
     # sleep(1)
