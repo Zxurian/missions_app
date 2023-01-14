@@ -11,7 +11,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-handler = logging.FileHandler("logs/log.log")
+handler = logging.FileHandler("logs/mission.log")
 formatter = logging.Formatter("%(name)s -  %(funcName)s - %(module)s")
 handler.setFormatter(formatter)
 
