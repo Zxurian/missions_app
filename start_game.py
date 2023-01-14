@@ -12,7 +12,7 @@ import re
 
 def start_game():
 
-    client = mission_config.get_option("client_title", "CLIENT")
+    client = config.get_option("client_title", "CLIENT")
 
     # Define the regular expressions for title1 and title2
     pattern1 = r"^Dual Universe$"

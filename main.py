@@ -1,6 +1,6 @@
 import time
 from log import logger
-from config import read_json_file, get_option
+import config
 from automate_characters import automate_users
 
 
@@ -10,7 +10,7 @@ def main():
 
     # Check for existence of user accounts to run automation on
     try:
-        account_list = read_json_file(get_option('user_list', 'JSON_FILE'))
+        account_list = config.read_json_file(config.get_option('user_list', 'JSON_FILE'))
     except Exception as e:
         logger.error(e)
     else:
