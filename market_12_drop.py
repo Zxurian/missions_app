@@ -1,5 +1,7 @@
-from time import sleep
 import pydirectinput as pydir
+
+from time import sleep
+
 from flight_complete import check_img_to_land
 import img_page as ip
 from is_window_active import is_window_active

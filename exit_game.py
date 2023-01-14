@@ -1,10 +1,12 @@
-from is_window_active import is_window_active
-from log import logger
-from time import sleep
 import pyautogui as pygui
-from double_check import double_check
+
+from time import sleep
+
 import img_page as ip
+from double_check import double_check
+from is_window_active import is_window_active
 from verify_img import check_for_screen
+from log import logger
 
 
 def exit_game():

@@ -1,10 +1,11 @@
-from time import sleep
 import pyautogui as pygui
 import pydirectinput as pydir
-from log import logger
 from ahk import AHK
 
+from time import sleep
+
 import img_page as ip
+from log import logger
 from is_window_active import is_window_active
 from verify_img import check_for_screen
 

@@ -1,4 +1,5 @@
 import cv2 as cv
+
 import img_page as ip
 
 image1 = r"assets\hayland.png"

@@ -1,16 +1,16 @@
-import json
-from log import logger
+import pydirectinput as pydir
+
 import sys
 from time import sleep
-import pydirectinput as pydir
-import img_page as ip
 
+import img_page as ip
 from is_window_active import is_window_active
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from logout import logout_of_account
 from respawn import respawn
 from verify_img import check_for_screen
+from log import logger
 from mission_config import JSON_FILE, read_json_file, get_option
 
 PILOT = get_option("end_of_characters", "PILOT")

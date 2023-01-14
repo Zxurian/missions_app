@@ -1,6 +1,7 @@
-from log import logger
-from time import sleep
 import pyautogui as pygui
+
+from time import sleep
+
 from double_check import double_check
 import img_page as ip
 from is_window_active import is_window_active

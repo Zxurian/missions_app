@@ -1,7 +1,8 @@
 import pyautogui as pygui
+
 import img_page as ip
-from log import logger
 from is_window_active import is_window_active
+from log import logger
 from verify_img import check_for_screen
 
 

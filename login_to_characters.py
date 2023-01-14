@@ -1,15 +1,15 @@
-import json
 import time
-from call_list import call_list
-from log import logger
 import random
 from time import sleep
 
-from is_window_active import is_window_active
+
+from call_list import call_list
+from log import logger
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from login_screen import at_login_screen
-from mission_config import read_json_file, get_option, JSON_FILE
+from is_window_active import is_window_active
+from mission_config import read_json_file, JSON_FILE
 from save_character_name import save_character_name
 from save_progress import save_progress
 

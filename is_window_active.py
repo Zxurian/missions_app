@@ -1,8 +1,9 @@
-import mission_config
 import win32gui
 import win32process
+
 import logging
-from screenshot_error import screen_shot_error
+
+import mission_config
 from start_game import start_game
 
 logger = logging.getLogger(__name__)

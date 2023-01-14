@@ -1,5 +1,5 @@
-from log import logger
 import img_page as ip
+from log import logger
 from verify_img import check_for_screen
 
 

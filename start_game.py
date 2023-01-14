@@ -1,13 +1,15 @@
-import sys
 import pyautogui as pygui
 import pydirectinput as pydir
-from log import logger
+
+import sys
+import re
+
 from double_check import double_check
 import img_page as ip
+from log import logger
+import mission_config
 from screenshot_error import screen_shot_error
 from verify_img import check_for_screen
-import mission_config
-import re
 
 
 def start_game():
