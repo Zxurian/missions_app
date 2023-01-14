@@ -27,21 +27,19 @@ def start_game():
         if du_icon != None:
             pygui.click(du_icon, clicks=2)
         else:
-            du_icon_2 = check_for_screen(
-                "DU Icon 2", ip.du_shortcut_2, 0.6, True)
+            du_icon_2 = check_for_screen("DU Icon 2", ip.du_shortcut_2, 0.6, True)
             pygui.click(du_icon_2, clicks=2)
 
     elif match2 and not match1:
-        geforce_home_du = check_for_screen(
-            "GeForce home du", ip.geforce_home_du, 0.7)
+        geforce_home_du = check_for_screen("GeForce home du", ip.geforce_home_du, 0.7)
         if geforce_home_du:
             pygui.moveTo(geforce_home_du)
             pydir.click()
 
-    du_window = check_for_screen("DU Play Btn", ip.DU_start, 0.6)
+    du_window = check_for_screen("DU Play Btn", ip.DU_start, 0.9)
     if du_window != None:
         pygui.click(du_window, clicks=2)
-        double_check(ip.DU_start, 0.6)
+        double_check(ip.DU_start, 0.9)
         return
     else:
         # wait and try again
@@ -49,6 +47,3 @@ def start_game():
         screen_shot_error("start_game_not_found")
         # TODO Send notification here
         sys.exit(0)
-
-
-start_game()
