@@ -5,15 +5,17 @@ from is_window_active import is_window_active
 from verify_img import check_for_screen
 from log import logger
 
+
 def menu():
     print("Working on: mission()")
-    is_window_active()
+
     # Press F8 Key to enter Mission Menu
-    pydir.press('f8')
+    pydir.press("f8")
 
     # get the screen coordinates of the yellow home icon
     yellow_home_icon_coords = check_for_screen(
-        'Yellow Home Icon', ip.needle_home_iconYellow, 0.9, True)
+        "Yellow Home Icon", ip.needle_home_iconYellow, 0.9, True
+    )
 
     # check if the yellow home icon was found
     if yellow_home_icon_coords != None:
@@ -24,6 +26,7 @@ def menu():
     # call the check_for_screen() function and get the screen coordinates of the home icon
     else:
         home_icon = check_for_screen(
-            'Reg Home Icon', ip.needle_unselected_home_icon, 0.9, True)
+            "Reg Home Icon", ip.needle_unselected_home_icon, 0.9, True
+        )
         pygui.click(home_icon)
         return

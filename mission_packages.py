@@ -8,7 +8,7 @@ from is_window_active import is_window_active
 
 def mission_packages(mission_name, mission_pay):
     print("Working on: reward_aileron()")
-    is_window_active()
+
     attempts = 20
     count = 0
     while count < attempts:
@@ -39,7 +39,7 @@ def mission_packages(mission_name, mission_pay):
 
 def reward_aileron():
     print("Working on: reward_aileron()")
-    is_window_active()
+
     attempts = 20
     count = 0
     while count < attempts:

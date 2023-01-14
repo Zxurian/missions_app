@@ -67,7 +67,6 @@ def end_of_characters():
                 print(email)
                 # print(pwd)
 
-                is_window_active()
                 login_with_credentials(email, pwd)
 
                 print("done entering custom info")

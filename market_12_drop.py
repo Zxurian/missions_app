@@ -8,7 +8,7 @@ from verify_img import check_for_screen
 
 def market_12_drop():
     print("Working on: market_12_drop()")
-    is_window_active()
+
     attempts = 60
     count = 0
     while count <= attempts:

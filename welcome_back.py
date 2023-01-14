@@ -6,7 +6,7 @@ from verify_img import check_for_screen
 
 
 def welcome_back():
-    is_window_active()
+
     logger.info("looking for welcome back reward:")
     welcome_back_coordinates = check_for_screen(
         "Welcome Back Reward", ip.needle_welcomeBack, 0.7, True

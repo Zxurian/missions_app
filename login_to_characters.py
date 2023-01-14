@@ -16,7 +16,6 @@ from save_progress import save_progress
 
 def login_to_character():
     """Logs in a character from user.json file"""
-    is_window_active()
 
     print("Working on: login()")
     try:

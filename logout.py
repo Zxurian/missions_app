@@ -15,7 +15,7 @@ def logout_of_account():
     while not at_esc_menu:
         if count >= 10:
             break
-        is_window_active()
+
         sleep(2)
         pydir.press("esc")
         at_esc_coordinates = check_for_screen(

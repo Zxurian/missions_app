@@ -5,7 +5,7 @@ from verify_img import check_for_screen
 
 
 def at_loading_screen():
-    is_window_active()
+
     # check to see if the login has completed and we're on the loading screen
     at_loading_screen = check_for_screen("Loading Complete", ip.loading_complete, 0.6)
     logger.info("Loading Complete")

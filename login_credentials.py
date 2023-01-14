@@ -15,7 +15,7 @@ def login_with_credentials(username, password):
 
     print(username)
     # print(password)
-    is_window_active()
+
     pydir.press("tab")
     pydir.press("backspace")
     pydir.press("tab")

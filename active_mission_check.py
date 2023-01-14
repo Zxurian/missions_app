@@ -17,7 +17,7 @@ def active_aileron_check():
 
     """
     print("Working on: active_aileron_check()")
-    is_window_active()
+
     try:
         aileron_parts = check_for_screen(
             "active aileron mission", ip.aileron_parts, 0.9, True

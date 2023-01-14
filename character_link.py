@@ -13,7 +13,7 @@ from mission_config import read_json_file, JSON_FILE
 
 def character_link():
     """Logs in a character from user.json file"""
-    is_window_active()
+
     print("Working on: login()")
     try:
         account_list = read_json_file(JSON_FILE)
