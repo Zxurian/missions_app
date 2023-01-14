@@ -6,7 +6,7 @@ from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from login_screen import at_login_screen
 from logout import logout_of_account
-from mission_config import read_json_file, JSON_FILE
+from config import read_json_file, JSON_FILE
 
 # TODO want to incorprate this into the start and ask for user input
 

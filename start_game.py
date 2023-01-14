@@ -6,7 +6,7 @@ from double_check import double_check
 import img_page as ip
 from screenshot_error import screen_shot_error
 from verify_img import check_for_screen
-import mission_config
+import config
 import re
 
 

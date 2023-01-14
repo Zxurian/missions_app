@@ -1,6 +1,6 @@
 import logging
 import os
-import mission_config
+import config
 
 # Create a logger
 logging.basicConfig(

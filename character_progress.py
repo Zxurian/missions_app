@@ -2,7 +2,7 @@ import json
 from load_progress import load_progress
 from login_credentials import login_with_credentials
 from save_progress import save_progress
-from mission_config import JSON_FILE, read_json_file
+from config import JSON_FILE, read_json_file
 
 
 def character_progress():
