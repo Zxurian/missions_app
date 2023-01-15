@@ -10,7 +10,7 @@ from time import sleep
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from login_screen import at_login_screen
-from mission_config import read_json_file, get_option, JSON_FILE
+from mission_config import read_json_file, JSON_FILE
 from save_character_name import save_character_name
 from save_progress import save_progress
 
@@ -58,6 +58,7 @@ def login_to_character():
             call_list()
             char_end_time = time.perf_counter()
             elapsed_time = char_end_time - char_start_time
-            logger.info(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
+            logger.info(
+                f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
             print(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
             continue
