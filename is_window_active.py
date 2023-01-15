@@ -3,6 +3,7 @@ import win32process
 
 import logging
 from start_game import start_game
+import mission_config
 
 logger = logging.getLogger(__name__)
 

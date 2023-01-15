@@ -4,7 +4,6 @@ import pydirectinput as pydir
 import img_page as ip
 
 from verify_img import check_for_screen
-from log import logger
 
 
 def menu():

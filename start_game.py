@@ -3,10 +3,14 @@ import pydirectinput as pydir
 
 import sys
 import re
+import logging
 
+import mission_config
 from double_check import double_check
 import img_page as ip
 from verify_img import check_for_screen
+
+logger = logging.getLogger(__name__)
 
 
 def start_game():

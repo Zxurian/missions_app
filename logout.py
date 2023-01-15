@@ -3,6 +3,7 @@ import pydirectinput as pydir
 
 from time import sleep
 
+import img_page as ip
 from verify_img import check_for_screen
 
 
