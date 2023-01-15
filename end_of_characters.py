@@ -30,7 +30,7 @@ def end_of_characters():
     print(f"number of characters: {num_characters}")
 
     try:
-        with open("character files/character_name.txt", encoding="UTF-8") as file:
+        with open("manifest_progression/character_name.txt", encoding="UTF-8") as file:
             file_contents = file.read()
     except (FileNotFoundError, KeyError):
         logger.error(FileNotFoundError, KeyError)
