@@ -1,11 +1,12 @@
 import pyautogui as pygui
-
+import logging
 
 from double_check import double_check
 import img_page as ip
-from is_window_active import is_window_active
-from log import logger
+
 from verify_img import check_for_screen
+
+logger = logging.getLogger(__name__)
 
 
 def active_aileron_check():
@@ -16,7 +17,7 @@ def active_aileron_check():
 
     """
     print("Working on: active_aileron_check()")
-    is_window_active()
+
     try:
         aileron_parts = check_for_screen(
             "active aileron mission", ip.aileron_parts, 0.9, True

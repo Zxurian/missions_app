@@ -2,14 +2,13 @@ import pyautogui as pygui
 
 from double_check import double_check
 import img_page as ip
-from is_window_active import is_window_active
-from log import logger
+
 from verify_img import check_for_screen
 
 
 def take_mission():
     print("Working on: take_mission()")
-    is_window_active()
+
     # Now we are looking for the take_mission btn to finish the process of getting the mission
     mission_details = check_for_screen(
         "mission details", ip.needle_mission_details, 0.8

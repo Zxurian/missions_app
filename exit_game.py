@@ -1,3 +1,5 @@
+from log import logger
+from time import sleep
 import pyautogui as pygui
 
 from time import sleep
@@ -10,7 +12,7 @@ from log import logger
 
 
 def exit_game():
-    is_window_active()
+
     logger.info("working of exit_game()")
     exit_game = check_for_screen("exit game menu", ip.exit_game, 0.9)
     if exit_game != None:

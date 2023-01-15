@@ -9,7 +9,7 @@ def save_progress(character):
     # characters = {character["name"]: character}
     try:
         with open(
-            "character files/character_progress.json", "w", encoding="UTF-8"
+            "manifest_progression/character_progress.json", "w", encoding="UTF-8"
         ) as progress_file:
             json.dump({"character": character}, progress_file)
     except Exception as e:

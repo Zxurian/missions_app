@@ -3,14 +3,13 @@ import pydirectinput as pydir
 
 from double_check import double_check
 import img_page as ip
-from is_window_active import is_window_active
-from log import logger
+
 from verify_img import check_for_screen
 
 
 def respawn():
     print("Working on: respawn()")
-    is_window_active()
+
     attempts = 30
     count = 0
     while count < attempts:

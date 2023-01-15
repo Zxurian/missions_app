@@ -2,10 +2,10 @@ import cv2 as cv
 
 import img_page as ip
 
-image1 = r"assets\hayland.png"
+image1 = r"assets\Screenshot11.png"
 haystack_img = cv.imread(image1, cv.IMREAD_UNCHANGED)
 
-needle_img = cv.imread(ip.landed, cv.IMREAD_UNCHANGED)
+needle_img = cv.imread(ip.DU_start, cv.IMREAD_UNCHANGED)
 
 
 result = cv.matchTemplate(haystack_img, needle_img, cv.TM_CCOEFF_NORMED)

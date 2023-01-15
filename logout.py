@@ -3,8 +3,6 @@ import pydirectinput as pydir
 
 from time import sleep
 
-import img_page as ip
-from is_window_active import is_window_active
 from verify_img import check_for_screen
 
 
@@ -15,7 +13,7 @@ def logout_of_account():
     while not at_esc_menu:
         if count >= 10:
             break
-        is_window_active()
+
         sleep(2)
         pydir.press("esc")
         at_esc_coordinates = check_for_screen(
