@@ -1,6 +1,7 @@
 import json
 import time
 from call_list import call_list
+from is_window_active import is_window_active
 from log import logger
 import random
 from time import sleep
@@ -18,6 +19,7 @@ def login_to_character():
     """Logs in a character from user.json file"""
 
     print("Working on: login()")
+    is_window_active()
     try:
         account_list = read_json_file(JSON_FILE)
     except Exception as e:
@@ -56,7 +58,6 @@ def login_to_character():
             call_list()
             char_end_time = time.perf_counter()
             elapsed_time = char_end_time - char_start_time
-            logger.info(
-                f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
+            logger.info(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
             print(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
             continue
