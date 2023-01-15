@@ -1,12 +1,12 @@
 import time
 from log import logger
-from login_to_characters import login_to_character
+from login_to_characters import login_process
 
 
 def main():
     while True:
         start_time = time.perf_counter()
-        login_to_character()
+        login_process()
         end_time = time.perf_counter()
         elapsed_time = end_time - start_time
         logger.info(f"Time Elapsed Cycles: {elapsed_time:.2f} seconds")
