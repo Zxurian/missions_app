@@ -37,13 +37,11 @@ def start_game():
 
     du_window = check_for_screen("DU Play Btn", ip.DU_start, 0.9)
     if du_window != None:
-        pygui.moveTo(du_window)
-        pydir.click()
+        pygui.click(du_window, clicks=2)
         double_check(ip.DU_start, 0.9)
         return
     else:
         # wait and try again
         logger.info("Client window and Game window not found")
-        screen_shot_error("start_game_not_found")
         # TODO Send notification here
         sys.exit(0)
