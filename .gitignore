@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,venv,python,opencv
 
 ### Custom ignores ###
-/user list
+/user_list
 character_progress.json 
 character_name.txt
 cspell.json
