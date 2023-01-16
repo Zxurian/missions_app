@@ -9,8 +9,6 @@ from config import read_json_file, JSON_FILE
 
 logger = logging.getLogger(__name__)
 
-logger = logging.getLogger(__name__)
-
 # TODO want to incorprate this into the start and ask for user input
 
 
