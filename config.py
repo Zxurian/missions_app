@@ -1,8 +1,5 @@
 import configparser
 import json
-import logging
-import os
-
 
 config = configparser.ConfigParser()
 config.read("mission config/config.conf")

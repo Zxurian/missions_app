@@ -11,7 +11,7 @@ from login_credentials import login_with_credentials
 from logout import logout_of_account
 from respawn import respawn
 from verify_img import check_for_screen
-from mission_config import JSON_FILE, read_json_file, get_option
+from config import JSON_FILE, read_json_file, get_option
 
 PILOT = get_option("end_of_characters", "PILOT")
 

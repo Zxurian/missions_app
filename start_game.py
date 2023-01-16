@@ -6,13 +6,13 @@ from double_check import double_check
 import img_page as ip
 from screenshot_error import screen_shot_error
 from verify_img import check_for_screen
-import mission_config
+import config
 import re
 
 
 def start_game():
 
-    client = mission_config.get_option("client_title", "CLIENT")
+    client = config.get_option("client_title", "CLIENT")
 
     # Define the regular expressions for title1 and title2
     pattern1 = r"^Dual Universe$"

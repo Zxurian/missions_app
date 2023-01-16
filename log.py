@@ -1,6 +1,6 @@
 import logging
 import os
-import mission_config
+import config
 
 # Create a logger
 logging.basicConfig(
@@ -20,7 +20,7 @@ logger.addHandler(handler)
 
 try:
     # Set the maximum size of the log file in bytes
-    MAX_SIZE = int(mission_config.get_option("log", "MAX_SIZE"))
+    MAX_SIZE = int(config.get_option("log", "MAX_SIZE"))
 except Exception as e:
     logger.debug("The value of MAX_SIZE is not a valid integer.")
 else:

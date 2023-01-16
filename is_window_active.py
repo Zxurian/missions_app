@@ -1,4 +1,4 @@
-import mission_config
+import config
 import win32gui
 import win32process
 import logging
@@ -7,7 +7,7 @@ from start_game import start_game
 
 logger = logging.getLogger(__name__)
 
-client = mission_config.get_option("client_title", "CLIENT")
+client = config.get_option("client_title", "CLIENT")
 
 
 def is_window_active():
