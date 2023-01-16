@@ -23,7 +23,7 @@ def end_of_characters():
         data = read_json_file(JSON_FILE)
     except (FileNotFoundError, KeyError):
         logger.error(FileNotFoundError, KeyError)
-        print("error loading user.json file")
+        print(f"error loading {JSON_FILE} file")
     else:
         characters = data["characters"]
 
@@ -31,7 +31,7 @@ def end_of_characters():
     print(f"number of characters: {num_characters}")
 
     try:
-        with open("manifest_progression/character_name.txt", encoding="UTF-8") as file:
+        with open("user_list_progression/character_name.txt", encoding="UTF-8") as file:
             file_contents = file.read()
     except (FileNotFoundError, KeyError):
         logger.error(FileNotFoundError, KeyError)
