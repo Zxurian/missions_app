@@ -1,10 +1,12 @@
 import pyautogui as pygui
 
-from log import logger
+import logging
 
 import img_page as ip
 from double_check import double_check
 from verify_img import check_for_screen
+
+logger = logging.getLogger(__name__)
 
 
 def deliver_package():
