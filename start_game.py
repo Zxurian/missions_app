@@ -42,7 +42,10 @@ def start_game():
             pydir.click()
 
     du_window = check_for_screen("DU Play Btn", ip.DU_start, 0.9)
+    du_window = check_for_screen("DU Play Btn", ip.DU_start, 0.9)
     if du_window != None:
+        pygui.click(du_window, clicks=2)
+        double_check(ip.DU_start, 0.9)
         pygui.click(du_window, clicks=2)
         double_check(ip.DU_start, 0.9)
         return

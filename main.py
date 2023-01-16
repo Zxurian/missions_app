@@ -1,5 +1,6 @@
 import time
 
+
 from log import logger
 import config
 from automate_characters import automate_users
