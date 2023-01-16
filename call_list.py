@@ -1,5 +1,3 @@
-from log import logger
-
 from active_mission_check import active_aileron_check
 from deliver_package import deliver_package
 from end_of_characters import end_of_characters

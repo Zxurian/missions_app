@@ -5,7 +5,7 @@ from log import logger
 
 def save_character_name(account_name):
     try:
-        with open("character files/character_name.txt", "w", encoding="UTF-8") as file:
+        with open("manifest_progression/character_name.txt", "w", encoding="UTF-8") as file:
             file.write(account_name)
 
     except Exception as e:

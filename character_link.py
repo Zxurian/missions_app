@@ -1,19 +1,20 @@
-import json
-from log import logger
 from time import sleep
-from is_window_active import is_window_active
+
+import logging
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from login_screen import at_login_screen
 from logout import logout_of_account
 from config import read_json_file, JSON_FILE
 
+logger = logging.getLogger(__name__)
+
 # TODO want to incorprate this into the start and ask for user input
 
 
 def character_link():
     """Logs in a character from user.json file"""
-    is_window_active()
+
     print("Working on: login()")
     try:
         account_list = read_json_file(JSON_FILE)

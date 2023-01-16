@@ -1,4 +1,3 @@
-import json
 from load_progress import load_progress
 from login_credentials import login_with_credentials
 from save_progress import save_progress

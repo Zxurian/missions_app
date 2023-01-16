@@ -1,11 +1,11 @@
-from time import sleep
 import pyautogui as pygui
 import pydirectinput as pydir
-from log import logger
 from ahk import AHK
 
+from time import sleep
+
 import img_page as ip
-from is_window_active import is_window_active
+
 from verify_img import check_for_screen
 
 ahk = AHK()
@@ -15,7 +15,7 @@ def login_with_credentials(username, password):
 
     print(username)
     # print(password)
-    is_window_active()
+
     pydir.press("tab")
     pydir.press("backspace")
     pydir.press("tab")

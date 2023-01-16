@@ -1,11 +1,11 @@
-import json
-from log import logger
+import pydirectinput as pydir
+
 import sys
 from time import sleep
-import pydirectinput as pydir
+
 import img_page as ip
 
-from is_window_active import is_window_active
+
 from loading_screen import at_loading_screen
 from login_credentials import login_with_credentials
 from logout import logout_of_account
@@ -30,7 +30,7 @@ def end_of_characters():
     print(f"number of characters: {num_characters}")
 
     try:
-        with open("character files/character_name.txt", encoding="UTF-8") as file:
+        with open("manifest_progression/character_name.txt", encoding="UTF-8") as file:
             file_contents = file.read()
     except (FileNotFoundError, KeyError):
         logger.error(FileNotFoundError, KeyError)
@@ -67,7 +67,6 @@ def end_of_characters():
                 print(email)
                 # print(pwd)
 
-                is_window_active()
                 login_with_credentials(email, pwd)
 
                 print("done entering custom info")
