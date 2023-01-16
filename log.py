@@ -6,7 +6,7 @@ import config
 logging.basicConfig(
     level=logging.INFO,
     filename="logs/mission.log",
-    filemode="w",
+    filemode="a",
     format="%(asctime)s - %(levelname)s: %(module)s:: %(funcName)s - %(name)s - %(message)s  ",
 )
 logger = logging.getLogger(__name__)
