@@ -1,7 +1,7 @@
 import pyautogui as pygui
 
-from time import sleep, time
-
+from time import sleep
+import time
 import img_page as ip
 from log import logger
 
