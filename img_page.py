@@ -59,6 +59,7 @@ haystack_login = r"assets\login_page\haystack_login.png"
 needle_login = r"assets\login_page\needle_login.png"
 needle_email_login = r"assets\login_page\needle_email_login.png"
 needle_pwd_login = r"assets\login_page\needle_pwd_login.png"
+email_login_login = r"assets\login_page\email_login_login.png"
 
 # logout page
 haystack_logout_page = r"assets\logout_page\haystack_logout_page.png"
