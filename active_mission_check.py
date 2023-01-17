@@ -1,12 +1,12 @@
-from log import logger
 import pyautogui as pygui
-import pydirectinput as pydir
+import logging
+
 from double_check import double_check
 import img_page as ip
-from is_window_active import is_window_active
+
 from verify_img import check_for_screen
 
-# aileron_parts = config.get_option('mission1', 'aileron')
+logger = logging.getLogger(__name__)
 
 
 def active_aileron_check():
@@ -17,7 +17,7 @@ def active_aileron_check():
 
     """
     print("Working on: active_aileron_check()")
-    is_window_active()
+
     try:
         aileron_parts = check_for_screen(
             "active aileron mission", ip.aileron_parts, 0.9, True
@@ -25,16 +25,10 @@ def active_aileron_check():
     except Exception as e:
         logger.error(e)
         pass
-    # If aileron_parts Coords
+
     if aileron_parts != None:
         pygui.click(aileron_parts)
-        try:
-            double_check(
-                ip.aileron_parts,
-                0.9,
-            )
-            return True
-        except Exception as e:
-            logger.error(e)
+        double_check(ip.aileron_parts, 0.9)
+        return True
     else:
         return False

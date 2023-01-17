@@ -1,17 +1,20 @@
-import sys
 import pyautogui as pygui
 import pydirectinput as pydir
-from log import logger
+
+import sys
+import re
+import logging
+
 from double_check import double_check
 import img_page as ip
-from screenshot_error import screen_shot_error
 from verify_img import check_for_screen
 import config
 import re
 
+logger = logging.getLogger(__name__)
+
 
 def start_game():
-
     client = config.get_option("client_title", "CLIENT")
 
     # Define the regular expressions for title1 and title2
@@ -37,14 +40,13 @@ def start_game():
             pygui.moveTo(geforce_home_du)
             pydir.click()
 
-    du_window = check_for_screen("DU Play Btn", ip.DU_start, 0.6)
+    du_window = check_for_screen("DU Play Btn", ip.DU_start, 0.9)
     if du_window != None:
-        pygui.click(du_window)
-        double_check(ip.DU_start, 0.6)
+        pygui.click(du_window, clicks=2)
+        double_check(ip.DU_start, 0.9)
         return
     else:
         # wait and try again
         logger.info("Client window and Game window not found")
-        screen_shot_error("start_game_not_found")
         # TODO Send notification here
         sys.exit(0)

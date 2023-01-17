@@ -1,10 +1,9 @@
 import pyautogui as pygui
 import pydirectinput as pydir
 
-import img_page as ip
-
 from time import sleep
-from is_window_active import is_window_active
+
+import img_page as ip
 from verify_img import check_for_screen
 
 
@@ -15,7 +14,7 @@ def logout_of_account():
     while not at_esc_menu:
         if count >= 10:
             break
-        is_window_active()
+
         sleep(2)
         pydir.press("esc")
         at_esc_coordinates = check_for_screen(
@@ -29,5 +28,5 @@ def logout_of_account():
     if not at_esc_menu:
         print("ESC Menu Not found")
         sleep(0.5)
-    pygui.leftClick(at_esc_coordinates)
+    pygui.click(at_esc_coordinates, clicks=2)
     return

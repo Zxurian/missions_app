@@ -1,12 +1,15 @@
-from log import logger
-from time import sleep
 import pyautogui as pygui
+
+from time import sleep
+
+from log import logger
 
 
 def check_for_screen(screen_name, image_to_compare, confidence, skip_sleep=False):
     is_on_screen = False
     check_count = 4
     max_checks = 15
+
     while not is_on_screen and check_count < max_checks:
         if skip_sleep != True:
             sleep(check_count)

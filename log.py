@@ -6,12 +6,12 @@ import config
 logging.basicConfig(
     level=logging.INFO,
     filename="logs/mission.log",
-    filemode="w",
+    filemode="a",
     format="%(asctime)s - %(levelname)s: %(module)s:: %(funcName)s - %(name)s - %(message)s  ",
 )
 logger = logging.getLogger(__name__)
 
-handler = logging.FileHandler("logs/log.log")
+handler = logging.FileHandler("logs/mission.log")
 formatter = logging.Formatter("%(name)s -  %(funcName)s - %(module)s")
 handler.setFormatter(formatter)
 

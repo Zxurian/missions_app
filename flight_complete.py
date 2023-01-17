@@ -1,9 +1,10 @@
-from log import logger
+import pyautogui as pygui
+
 from time import sleep
 import time
-
-import pyautogui as pygui
 import img_page as ip
+from log import logger
+
 
 # TODO landed_img hangs here waiting for img and when G is pressed within game and img is displayed again
 # it is able to reconigze it again and procced.
