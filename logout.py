@@ -28,5 +28,5 @@ def logout_of_account():
     if not at_esc_menu:
         print("ESC Menu Not found")
         sleep(0.5)
-    pygui.leftClick(at_esc_coordinates)
+    pygui.click(at_esc_coordinates, clicks=2)
     return
