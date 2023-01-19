@@ -2,6 +2,12 @@ from __future__ import annotations
 import time
 
 
+"""Stopwatch class for handling duration of actions
+
+This class will handle tracking time elapsed of desired actions based
+on the start & stop times. The start and stop times are immutable
+so stopwatch times will keep for the duration of the instance.
+"""
 class Stopwatch:
     start_time = None
     stop_time = None
