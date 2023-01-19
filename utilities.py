@@ -20,7 +20,7 @@ class Stopwatch:
         """Initializes the class, optionally starting the stopwatch at the time time if True is provided
 
         @param start_stopwatch: bool (False)
-        @return:
+        @return: Stopwatch
         """
         if start_stopwatch:
             self.__start_time = time.perf_counter()
@@ -40,10 +40,20 @@ class Stopwatch:
         self.__start_time = time.perf_counter()
         return self
 
+    def get_start(self) -> float:
+        """Get the timestamp of when the Stopwatch was started
+
+        @return: float
+        """
+        if self.__start_time is None:
+            raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
+
+        return self.__start_time
+
     def stop(self) -> Stopwatch:
         """
 
-        @return:
+        @return: Stopwatch
         """
         if self.__start_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
@@ -54,6 +64,16 @@ class Stopwatch:
         self.__stop_time = time.perf_counter()
         self.__total_time = self.__stop_time - self.__start_time
         return self
+
+    def get_stop(self) -> float:
+        """Get the timestamp of when the Stopwatch was stopped
+
+        @return: float
+        """
+        if self.__start_time is None:
+            raise StopwatchException(StopwatchException.STOPWATCH_NOT_STOPPED)
+
+        return self.__stop_time
 
     def get_total_time(self) -> float:
         """Get the total time difference between starting and stopping in seconds
