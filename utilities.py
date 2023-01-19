@@ -9,47 +9,47 @@ on the start & stop times. The start and stop times are immutable
 so stopwatch times will keep for the duration of the instance.
 """
 class Stopwatch:
-    start_time = None
-    stop_time = None
-    total_time = None
+    __start_time = None
+    __stop_time = None
+    __total_time = None
 
     def start(self) -> Stopwatch:
-        if self.stop_time is not None:
+        if self.__stop_time is not None:
             raise StopwatchException(StopwatchException.STOPWATCH_ALREADY_STOPPED)
 
-        if self.start_time is not None:
+        if self.__start_time is not None:
             raise StopwatchException(StopwatchException.STOPWATCH_ALREADY_STARTED)
 
-        self.start_time = time.perf_counter()
+        self.__start_time = time.perf_counter()
         return self
 
     def stop(self) -> Stopwatch:
-        if self.start_time is None:
+        if self.__start_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
 
-        if self.stop_time is not None:
+        if self.__stop_time is not None:
             raise StopwatchException(StopwatchException.STOPWATCH_ALREADY_STOPPED)
 
-        self.stop_time = time.perf_counter()
-        self.total_time = self.stop_time - self.start_time
+        self.__stop_time = time.perf_counter()
+        self.__total_time = self.__stop_time - self.__start_time
         return self
 
     def get_total_time(self) -> float:
-        if self.start_time is None:
+        if self.__start_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
-        if self.stop_time is None:
+        if self.__stop_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STOPPED)
 
-        return self.total_time
+        return self.__total_time
 
     def get_elapsed(self) -> float:
-        if self.start_time is None:
+        if self.__start_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
 
-        if self.stop_time is None:
-            return time.perf_counter() - self.start_time
+        if self.__stop_time is None:
+            return time.perf_counter() - self.__start_time
         else:
-            return self.total_time
+            return self.__total_time
 
 
 class StopwatchException(Exception):
