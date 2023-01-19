@@ -47,7 +47,7 @@ class Stopwatch:
 
 
 class StopwatchException(Exception):
-    STOPWATCH_NOT_STARTED = 1
-    STOPWATCH_ALREADY_STARTED = 2
-    STOPWATCH_NOT_STOPPED = 3
-    STOPWATCH_ALREADY_STOPPED = 4
+    STOPWATCH_NOT_STARTED = 'Stopwatch is not started yet'
+    STOPWATCH_ALREADY_STARTED = 'Stopwatch is already started'
+    STOPWATCH_NOT_STOPPED = 'Stopwatch is not stopped yet'
+    STOPWATCH_ALREADY_STOPPED = 'Stopwatch is already stopped'
