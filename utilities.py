@@ -1,23 +1,36 @@
 from __future__ import annotations
 import time
 
-"""Stopwatch class for handling duration of actions
 
-This class will handle tracking time elapsed of desired actions based
-on the start & stop times. The start and stop times are immutable
-so stopwatch times will keep for the duration of the instance.
-"""
 class Stopwatch:
+    """Stopwatch class for tracking start & stop times
+
+    This class will handle tracking time elapsed of desired actions based
+    on the start & stop times. The start and stop times are immutable
+    so stopwatch times will keep for the duration of the instance.
+
+    ...
+
+    """
     __start_time = None
     __stop_time = None
     __total_time = None
 
     def __int__(self, start_stopwatch=False) -> Stopwatch:
+        """Initializes the class, optionally starting the stopwatch at the time time if True is provided
+
+        @param start_stopwatch: bool (False)
+        @return:
+        """
         if start_stopwatch:
             self.__start_time = time.perf_counter()
         return self
 
     def start(self) -> Stopwatch:
+        """Starts the stopwatch
+
+        @return: Stopwatch
+        """
         if self.__stop_time is not None:
             raise StopwatchException(StopwatchException.STOPWATCH_ALREADY_STOPPED)
 
@@ -28,6 +41,10 @@ class Stopwatch:
         return self
 
     def stop(self) -> Stopwatch:
+        """
+
+        @return:
+        """
         if self.__start_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
 
@@ -39,6 +56,10 @@ class Stopwatch:
         return self
 
     def get_total_time(self) -> float:
+        """Get the total time difference between starting and stopping in seconds
+
+        @return: float
+        """
         if self.__start_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
         if self.__stop_time is None:
@@ -47,6 +68,10 @@ class Stopwatch:
         return self.__total_time
 
     def get_elapsed(self) -> float:
+        """Get the current time elapsed since the stopwatch was started, or the total time if already stopped
+
+        @return: float
+        """
         if self.__start_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
 
