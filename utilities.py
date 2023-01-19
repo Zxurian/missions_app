@@ -1,7 +1,6 @@
 from __future__ import annotations
 import time
 
-
 """Stopwatch class for handling duration of actions
 
 This class will handle tracking time elapsed of desired actions based
@@ -12,6 +11,11 @@ class Stopwatch:
     __start_time = None
     __stop_time = None
     __total_time = None
+
+    def __int__(self, start_stopwatch=False) -> Stopwatch:
+        if start_stopwatch:
+            self.__start_time = time.perf_counter()
+        return self
 
     def start(self) -> Stopwatch:
         if self.__stop_time is not None:
