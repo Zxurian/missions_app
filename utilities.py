@@ -14,7 +14,7 @@ class Stopwatch:
     __stop_time = None
     __total_time = None
 
-    def __int__(self, start_stopwatch=False) -> Stopwatch:
+    def __init__(self, start_stopwatch=False) -> None:
         """Initialize the Stopwatch, optionally starting it at the same time
 
         :param start_stopwatch: bool
@@ -22,7 +22,6 @@ class Stopwatch:
         """
         if start_stopwatch:
             self.__start_time = time.perf_counter()
-        return self
 
     def start(self) -> Stopwatch:
         """Start the stopwatch
