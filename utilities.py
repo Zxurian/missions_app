@@ -68,6 +68,9 @@ class Stopwatch:
         :return: float
         """
         if self.__start_time is None:
+            raise StopwatchException(StopwatchException.STOPWATCH_NOT_STARTED)
+
+        if self.__stop_time is None:
             raise StopwatchException(StopwatchException.STOPWATCH_NOT_STOPPED)
 
         return self.__stop_time
