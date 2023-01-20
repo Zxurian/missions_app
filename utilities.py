@@ -3,7 +3,7 @@ import time
 
 
 class Stopwatch:
-    """Stopwatch class for tracking start & stop times
+    """Stopwatch class for tracking start & stop times relative to program start
 
     This class will handle tracking time elapsed of desired actions based
     on the start & stop times. The start and stop times are immutable
@@ -21,7 +21,7 @@ class Stopwatch:
         :return: Stopwatch
         """
         if start_stopwatch:
-            self.__start_time = time.perf_counter()
+            self.start()
 
     def start(self) -> Stopwatch:
         """Start the stopwatch
@@ -73,7 +73,7 @@ class Stopwatch:
         return self.__stop_time
 
     def get_total_time(self) -> float:
-        """Get the total time difference between start and stopped
+        """Get the delta difference between start and stopped in seconds
 
         :return: float
         """
@@ -85,7 +85,7 @@ class Stopwatch:
         return self.__total_time
 
     def get_elapsed(self) -> float:
-        """Get the elapsed time since the start of the stopwatch. Returns total time if stopped.
+        """Get the delta since the start of the stopwatch in seconds. Returns total time if stopped.
 
         :return:
         """
