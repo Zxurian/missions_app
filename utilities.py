@@ -100,6 +100,8 @@ class Stopwatch:
 
 
 class StopwatchException(Exception):
+    """Exception Class for the Stopwatch Class"""
+
     STOPWATCH_NOT_STARTED = 'Stopwatch is not started yet'
     STOPWATCH_ALREADY_STARTED = 'Stopwatch is already started'
     STOPWATCH_NOT_STOPPED = 'Stopwatch is not stopped yet'
