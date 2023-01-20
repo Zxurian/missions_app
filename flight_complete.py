@@ -1,8 +1,8 @@
 import pyautogui as pygui
 
 from time import sleep
-import time
 import img_page as ip
+import utilities
 from log import logger
 
 
@@ -14,7 +14,7 @@ def check_img_to_land():
 
     print("Starting Flight")
 
-    start_time = time.perf_counter()
+    image_timer = utilities.Stopwatch(True)
 
     # sleep here to give a delay between the time the ship takes off and the img will disapear.
     sleep(15)
@@ -25,11 +25,9 @@ def check_img_to_land():
         if img_region == None:
             continue
 
-        end_time = time.perf_counter()
-        elapsed_time = end_time - start_time
-
-        logger.info(f"Time Elapsed: flight time {elapsed_time:.2f} seconds")
-        print(f"Time Elapsed: flight time {elapsed_time:.2f} seconds")
+        image_timer.stop()
+        logger.info(f"Time Elapsed: flight time {image_timer.get_total_time():.2f} seconds")
+        print(f"Time Elapsed: flight time {image_timer.get_total_time():.2f} seconds")
 
         # gives time for ship to land before continuing
         sleep(10)

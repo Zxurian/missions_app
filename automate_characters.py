@@ -1,4 +1,4 @@
-import time
+import utilities
 from call_list import call_list
 from log import logger
 import random
@@ -26,7 +26,7 @@ def automate_users(account_list):
     is_window_active()
 
     for account_name, account_info in account_list["characters"].items():
-        char_start_time = time.perf_counter()
+        character_stopwatch = utilities.Stopwatch(True)
 
         # # save the name of the character to a file
         save_character_name(str(account_name))
@@ -55,7 +55,6 @@ def automate_users(account_list):
         # wait a bit before trying to logout
         sleep(random.randint(3, 6))
         call_list()
-        char_end_time = time.perf_counter()
-        elapsed_time = char_end_time - char_start_time
-        logger.info(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
-        print(f"Time Elapsed {account_name}: {elapsed_time:.2f} seconds")
+        character_stopwatch.stop()
+        logger.info(f"Time Elapsed {account_name}: {character_stopwatch.get_total_time():.2f} seconds")
+        print(f"Time Elapsed {account_name}: {character_stopwatch.get_total_time():.2f} seconds")
