@@ -20,8 +20,9 @@ class TestStopwatchFunctions(unittest.TestCase):
 
     def test_start(self):
         stopwatch = utilities.Stopwatch()
-        stopwatch.start()
+        ret = stopwatch.start()
         self.assertIsNotNone(stopwatch._Stopwatch__start_time)
+        self.assertIsInstance(ret, utilities.Stopwatch)
 
         stopwatch = utilities.Stopwatch()
         stopwatch._Stopwatch__stop_time = 1.2345
@@ -50,9 +51,10 @@ class TestStopwatchFunctions(unittest.TestCase):
     def test_stop(self):
         stopwatch = utilities.Stopwatch()
         stopwatch._Stopwatch__start_time = 0.0001
-        stopwatch.stop()
+        ret = stopwatch.stop()
         self.assertIsNotNone(stopwatch._Stopwatch__stop_time)
         self.assertEqual(stopwatch._Stopwatch__stop_time - stopwatch._Stopwatch__start_time, stopwatch._Stopwatch__total_time)
+        self.assertIsInstance(ret, utilities.Stopwatch)
 
         stopwatch = utilities.Stopwatch()
         stopwatch._Stopwatch__start_time = None
